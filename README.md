@@ -4,7 +4,6 @@
 
 Telegram万人群https://t.me/BT_json
 
-官方QQ群：464327881
 
 
 <h3><strong>简单介绍</strong></h3>
