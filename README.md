@@ -1,6 +1,6 @@
-官方QQ群：464327881
 
-官方网站： www.5mrk.com
+
+官方网站： www.5mrk.com    Telegram万人群https://t.me/BT_json    官方QQ群：464327881
 
 
 <h3><strong>简单介绍</strong></h3>
