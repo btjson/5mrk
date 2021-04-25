@@ -36,6 +36,80 @@ Telegram万人群https://t.me/BT_json
 
 <h3><strong>更新说明：</strong></h3>
 
+2021年04月21号
+
+1.更新远程js为在线实时更新（免去你们总是手动自己更新的麻烦）
+
+ 
+
+2021年04月17号
+
+ 
+
+全新前端（重构各种功能。抛弃0.3.8以前的所有版本，此版本大概4月底强制更新）目前最新的版本为1.0版本
+————————————————————
+
+（此内容是给技术人员预留的，会技术的可以自己继续开发 不会的无视此项）
+
+/library/docking/socket/Currency.php
+
+此文件可以自己随意构造自己想要的播放json输出模式
+
+里面已经给你们放了一个演示例子 自己可以按照例子设置
+
+也可以这样
+$this->setPlayer();
+
+$this->setPlayer(‘ckplayer’);
+
+$this->setPlayer(‘dplayer’);
+
+———————————————————–
+
+1. 修改json接口 在此文件夹里面/library/config/config.php
+
+2.
+
+* 解析接口对接模式 – 高级版
+* 可用参数说明 – >
+* – title 接口名称
+* – match 匹配值 (解释【*,自定义】)
+* – custom 自定义对接JSON(配合url字段 – 详细看对接文档) true | false
+* – url 接口地址 (解析接口,支持自定义对接)
+* – spare_url 备用接口地址 (主接口请求失败使用备用接口) 自定义对接不生效(可留空或删除该字段)
+* – cache 自定义缓存 [switch缓存开关 true:false | cacheTime缓存时间 整数 (秒)]
+* – parameter 自定义回调参数 [url局内地址 : “解析json字段(url)” | source来路定义 : “解析json字段(metareferer)”] 自定义对接不生效
+* – referrer 来路设置 [default默认 : “never” | no-referrer匹配模式 | never匹配模式]
+
+3. /library/docking/socket/Currency.php 这个文件我默认对接的是/library/config/config.php里面的奇艺 优酷 自己把json接口放在Currency.php里面即可， 因为Currency.php文件是自定义所有的东西所有目前只给你们写了一个参考例子
+
+4. /library/config/config.php 里面设置json跟0.3.8版本基本上是大同小异，自己看下说明或者自己研究下也可以
+
+5. 修改player.php 文件在 view/player.php 设置好自己的后端域名 和key
+
+重构说明：
+1. 重构了一个最严重的bug 弹幕 判断URL 入库 （注释：下次更新直接更新显示播放页片名显示）
+
+2. 重构 弹幕播放器在线人数显示的bug （以前不管是我这边的还是外面泛滥版本一直有这个bug 所有现在完美修复这个问题 （注释：下次更新直接对接统计 来实现显示在线人数））
+
+3. 重构json返回数据响应 优化
+
+4. 重构禁止来路，禁止伪造及跨域 （修复）
+
+5. 重构 多json接口 的优化及使用 （修复）
+
+6. 重构 在使用CDN的情况下缓存出现bug的问题
+
+7. 忘记还有啥了，，，，，，，，，，脑子乱了
+
+ 
+
+ 
+
+ 
+
+ 
+
 2021年04月08号
 
 - 1.优化核心代码
